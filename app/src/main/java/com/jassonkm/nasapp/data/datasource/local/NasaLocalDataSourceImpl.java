@@ -2,7 +2,6 @@ package com.jassonkm.nasapp.data.datasource.local;
 
 import com.jassonkm.nasapp.data.datasource.local.dao.NasaDao;
 import com.jassonkm.nasapp.domain.Nasa;
-import java.util.List;
 import javax.inject.Inject;
 
 public class NasaLocalDataSourceImpl implements NasaLocalDataSource {
@@ -15,8 +14,8 @@ public class NasaLocalDataSourceImpl implements NasaLocalDataSource {
     }
 
     @Override
-    public List<Nasa> getAllNasa() {
-        return null;
+    public Nasa getAllNasa() {
+        return nasaDao.getAllNasa();
     }
 
     @Override

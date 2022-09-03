@@ -1,7 +1,6 @@
 package com.jassonkm.nasapp.di;
 
 import static com.jassonkm.nasapp.utils.Constants.BASE_URL;
-
 import com.jassonkm.nasapp.data.datasource.remote.network.NasaApi;
 import com.skydoves.sandwich.adapters.ApiResponseCallAdapterFactory;
 import java.util.concurrent.TimeUnit;
@@ -21,8 +20,10 @@ public class NetworkModule {
 
     @Singleton
     @Provides
-    public static HttpLoggingInterceptor.Level provideLoggingInterceptor() {
-        return HttpLoggingInterceptor.Level.BODY;
+    public static HttpLoggingInterceptor provideLoggingInterceptor() {
+         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
+         httpLoggingInterceptor.level(HttpLoggingInterceptor.Level.BODY);
+         return httpLoggingInterceptor;
     }
 
     @Singleton

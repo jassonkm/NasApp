@@ -3,7 +3,6 @@ package com.jassonkm.nasapp.data.repository;
 import com.jassonkm.nasapp.data.datasource.local.NasaLocalDataSource;
 import com.jassonkm.nasapp.data.datasource.remote.network.NasaRemoteDataSource;
 import com.jassonkm.nasapp.domain.Nasa;
-import java.util.List;
 import javax.inject.Inject;
 import retrofit2.Call;
 
@@ -24,7 +23,7 @@ public class NasaRepositoryImpl implements NasaRepository {
     }
 
     @Override
-    public List<Nasa> getNasaFromLocal() {
+    public Nasa getNasaFromLocal() {
         return nasaLocalDataSource.getAllNasa();
     }
 

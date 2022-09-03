@@ -1,15 +1,10 @@
 package com.jassonkm.nasapp.di;
 
-
 import static com.jassonkm.nasapp.utils.Constants.NAME_NASA_DATABASE;
-
 import android.content.Context;
-
 import androidx.room.Room;
-
 import com.jassonkm.nasapp.data.datasource.local.NasaDatabase;
 import com.jassonkm.nasapp.data.datasource.local.dao.NasaDao;
-
 import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
@@ -24,7 +19,7 @@ public class RoomModule {
     @Singleton
     @Provides
     public static NasaDatabase provideRoom(@ApplicationContext Context context) {
-        return Room.databaseBuilder(context, NasaDatabase.class, NAME_NASA_DATABASE).build();
+        return Room.databaseBuilder(context, NasaDatabase.class, NAME_NASA_DATABASE).allowMainThreadQueries().build();
     }
 
     @Singleton

@@ -1,7 +1,6 @@
 package com.jassonkm.nasapp.data.datasource.remote.network;
 
 import com.jassonkm.nasapp.domain.Nasa;
-import java.util.List;
 import javax.inject.Inject;
 import retrofit2.Call;
 
