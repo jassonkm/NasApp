@@ -4,7 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".ui.view.MainActivity">
+    tools:context=".ui.view.activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <TextView
         android:id="@+id/textViewTitle"
@@ -14,11 +20,10 @@
         android:text="abhiAndroid"
         android:textColor="#FF5733" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:scaleType="fitXY"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <ProgressBar
         android:id="@+id/progressBar"
