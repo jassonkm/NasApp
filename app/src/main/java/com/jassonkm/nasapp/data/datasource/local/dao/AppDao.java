@@ -6,6 +6,7 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import com.jassonkm.nasapp.domain.Home;
+import com.jassonkm.nasapp.domain.Landsat;
 import com.jassonkm.nasapp.domain.Nasa;
 
 import java.util.List;
@@ -24,4 +25,10 @@ public interface AppDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAllHome(List<Home> homeList);
+
+    @Query("SELECT * FROM landsat_table ORDER BY idLandsat ASC")
+    Landsat getAllLandsat();
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insertAllLandsat(Landsat landsat);
 }

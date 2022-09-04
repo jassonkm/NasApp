@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     try {
                         imageUrl = nasa.getImageUrl();
                         binding.textViewTitle.setText(nasa.getTitle());
+                        binding.textViewMetadata.setText(nasa.getMetadata());
                         Glide.with(getApplication())
                                 .load(nasa.getImage())
                                 .centerCrop()

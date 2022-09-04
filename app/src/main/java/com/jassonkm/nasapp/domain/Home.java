@@ -12,10 +12,6 @@ public class Home {
     @ColumnInfo(name = "idLocal")
     private int id;
 
-  /*  @SerializedName("id")
-    @ColumnInfo(name = "idRemote")
-    private String idHome;*/
-
     @SerializedName("year")
     @ColumnInfo(name = "year")
     private String year;
