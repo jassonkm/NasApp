@@ -1,18 +1,13 @@
 package com.jassonkm.nasapp.ui.viewmodel;
 
-import static com.jassonkm.nasapp.utils.Constants.YEAR;
-
 import android.util.Log;
-
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import com.jassonkm.nasapp.data.repository.home.HomeRepository;
 import com.jassonkm.nasapp.domain.Home;
-
 import java.util.List;
-
 import javax.inject.Inject;
 import dagger.hilt.android.lifecycle.HiltViewModel;
 import retrofit2.Call;
