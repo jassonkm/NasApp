@@ -3,7 +3,6 @@ package com.jassonkm.nasapp.domain;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
 import com.google.gson.annotations.SerializedName;
 
 @Entity(tableName = "nasa_table")
@@ -17,6 +16,10 @@ public class Nasa {
     @ColumnInfo(name = "image")
     private String image;
 
+    @SerializedName("url")
+    @ColumnInfo(name = "url")
+    private String imageUrl;
+
     @SerializedName("title")
     @ColumnInfo(name = "title")
     private String title;
@@ -29,8 +32,10 @@ public class Nasa {
         super();
     }
 
-    public Nasa(int id, String image, String title, String metadata) {
+    public Nasa(int id, String image, String imageUrl, String title, String metadata) {
+        this.id = id;
         this.image = image;
+        this.imageUrl = imageUrl;
         this.title = title;
         this.metadata = metadata;
     }
@@ -49,6 +54,14 @@ public class Nasa {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public String getTitle() {

@@ -1,7 +1,9 @@
 package com.jassonkm.nasapp.di;
 
-import static com.jassonkm.nasapp.utils.Constants.BASE_URL;
-import com.jassonkm.nasapp.data.datasource.remote.network.NasaApi;
+import static com.jassonkm.nasapp.utils.Constants.BASE_URL_NASA;
+
+import com.jassonkm.nasapp.BuildConfig;
+import com.jassonkm.nasapp.data.datasource.remote.network.nasa.NasaApi;
 import com.skydoves.sandwich.adapters.ApiResponseCallAdapterFactory;
 import java.util.concurrent.TimeUnit;
 import javax.inject.Singleton;
@@ -41,7 +43,7 @@ public class NetworkModule {
     public static Retrofit provideRetrofit(OkHttpClient okHttpClient) {
         return new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl(BASE_URL)
+                .baseUrl(BASE_URL_NASA)
                 .addCallAdapterFactory(ApiResponseCallAdapterFactory.create())
                 .client(okHttpClient)
                 .build();

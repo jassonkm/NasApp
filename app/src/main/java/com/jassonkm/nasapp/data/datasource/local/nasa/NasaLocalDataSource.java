@@ -1,4 +1,4 @@
-package com.jassonkm.nasapp.data.datasource.local;
+package com.jassonkm.nasapp.data.datasource.local.nasa;
 
 import com.jassonkm.nasapp.domain.Nasa;
 

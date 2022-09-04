@@ -1,4 +1,4 @@
-package com.jassonkm.nasapp.ui.adapter;
+package com.jassonkm.nasapp.ui.view.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -8,11 +8,11 @@ import java.util.ArrayList;
 
 public class PagerAdapter extends FragmentPagerAdapter {
 
-    private ArrayList<Fragment> fragmentArrayList;
-
     public PagerAdapter(@NonNull FragmentManager fm) {
         super(fm);
     }
+
+    private final ArrayList<Fragment> fragmentArrayList = new ArrayList<>();
 
     @NonNull
     @Override

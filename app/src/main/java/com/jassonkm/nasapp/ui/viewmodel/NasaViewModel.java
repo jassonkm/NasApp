@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-import com.jassonkm.nasapp.data.repository.NasaRepository;
+import com.jassonkm.nasapp.data.repository.nasa.NasaRepository;
 import com.jassonkm.nasapp.domain.Nasa;
 import javax.inject.Inject;
 import dagger.hilt.android.lifecycle.HiltViewModel;
@@ -32,7 +32,7 @@ public class NasaViewModel extends ViewModel {
     public LiveData<Nasa> getNasa() {
         _isLoading.postValue(true);
         Nasa nasa = nasaRepository.getNasaFromLocal();
-        nasaRepository.getNasaFromRemote(API_KEY).enqueue(new Callback<Nasa>() {
+        nasaRepository.getNasaFromRemote().enqueue(new Callback<Nasa>() {
             @Override
             public void onResponse(@NonNull Call<Nasa> call, @NonNull Response<Nasa> response) {
                 _isLoading.postValue(false);

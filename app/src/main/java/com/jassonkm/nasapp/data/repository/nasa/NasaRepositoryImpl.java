@@ -1,7 +1,7 @@
-package com.jassonkm.nasapp.data.repository;
+package com.jassonkm.nasapp.data.repository.nasa;
 
-import com.jassonkm.nasapp.data.datasource.local.NasaLocalDataSource;
-import com.jassonkm.nasapp.data.datasource.remote.network.NasaRemoteDataSource;
+import com.jassonkm.nasapp.data.datasource.local.nasa.NasaLocalDataSource;
+import com.jassonkm.nasapp.data.datasource.remote.network.nasa.NasaRemoteDataSource;
 import com.jassonkm.nasapp.domain.Nasa;
 import javax.inject.Inject;
 import retrofit2.Call;
@@ -18,8 +18,8 @@ public class NasaRepositoryImpl implements NasaRepository {
     }
 
     @Override
-    public Call<Nasa> getNasaFromRemote(String apiKey) {
-        return nasaRemoteDataSource.getNasaFromApi(apiKey);
+    public Call<Nasa> getNasaFromRemote() {
+        return nasaRemoteDataSource.getNasaFromApi();
     }
 
     @Override

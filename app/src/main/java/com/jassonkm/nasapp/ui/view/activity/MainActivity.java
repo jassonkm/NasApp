@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
     private NasaViewModel nasaViewModel;
+    private String imageUrl = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         setObservers();
 
         binding.button.setOnClickListener(view -> {
-            Intent intent = new Intent(this, HomeActivity.class);
+            Intent intent = new Intent(this, NasaActivity.class);
+            intent.putExtra("imageUrl", imageUrl);
             startActivity(intent);
         });
     }
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 nasaViewModel.getNasa().observe(MainActivity.this, nasa -> {
                     try {
+                        imageUrl = nasa.getImageUrl();
                         binding.textViewTitle.setText(nasa.getTitle());
                         Glide.with(getApplication())
                                 .load(nasa.getImage())

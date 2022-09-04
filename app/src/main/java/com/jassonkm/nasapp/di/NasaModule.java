@@ -1,11 +1,11 @@
 package com.jassonkm.nasapp.di;
 
-import com.jassonkm.nasapp.data.datasource.local.NasaLocalDataSource;
-import com.jassonkm.nasapp.data.datasource.local.NasaLocalDataSourceImpl;
-import com.jassonkm.nasapp.data.datasource.remote.network.NasaRemoteDataSource;
-import com.jassonkm.nasapp.data.datasource.remote.network.NasaRemoteDataSourceImpl;
-import com.jassonkm.nasapp.data.repository.NasaRepository;
-import com.jassonkm.nasapp.data.repository.NasaRepositoryImpl;
+import com.jassonkm.nasapp.data.datasource.local.nasa.NasaLocalDataSource;
+import com.jassonkm.nasapp.data.datasource.local.nasa.NasaLocalDataSourceImpl;
+import com.jassonkm.nasapp.data.datasource.remote.network.nasa.NasaRemoteDataSource;
+import com.jassonkm.nasapp.data.datasource.remote.network.nasa.NasaRemoteDataSourceImpl;
+import com.jassonkm.nasapp.data.repository.nasa.NasaRepository;
+import com.jassonkm.nasapp.data.repository.nasa.NasaRepositoryImpl;
 import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;

@@ -1,4 +1,7 @@
-package com.jassonkm.nasapp.data.datasource.remote.network;
+package com.jassonkm.nasapp.data.datasource.remote.network.nasa;
+
+import static com.jassonkm.nasapp.utils.Constants.API_KEY;
+import static com.jassonkm.nasapp.utils.Constants.BASE_URL_NASA;
 
 import com.jassonkm.nasapp.domain.Nasa;
 import javax.inject.Inject;
@@ -14,7 +17,7 @@ public class NasaRemoteDataSourceImpl implements NasaRemoteDataSource {
     }
 
     @Override
-    public Call<Nasa> getNasaFromApi(String apiKey) {
-        return nasaApi.getNasa(apiKey);
+    public Call<Nasa> getNasaFromApi() {
+        return nasaApi.getNasa(BASE_URL_NASA, API_KEY);
     }
 }
