@@ -22,8 +22,8 @@ public class HomeRepositoryImpl implements HomeRepository {
     }
 
     @Override
-    public Call<List<Home>> getHomeFromRemote() {
-        return homeRemoteDataSource.getHomeFromApi();
+    public Call<List<Home>> getHomeFromRemote(String endpoint) {
+        return homeRemoteDataSource.getHomeFromApi(endpoint);
     }
 
     @Override

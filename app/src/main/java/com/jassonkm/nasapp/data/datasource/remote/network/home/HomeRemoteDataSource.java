@@ -8,5 +8,5 @@ import retrofit2.Call;
 
 public interface HomeRemoteDataSource {
 
-    Call<List<Home>> getHomeFromApi();
+    Call<List<Home>> getHomeFromApi(String endpoint);
 }
